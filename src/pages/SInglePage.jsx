@@ -1,10 +1,15 @@
+import Button from "../components/button"
+import Navbar from "../components/Navbar"
 
 
 
 
 function SinglePage(){
     return (
-        <h1>Single Page</h1>
+        <>
+        <Navbar />
+        <Button title="SinglePage"/>
+        </>
     )
 }
 

@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import HomePage from "./pages/HomePage"
-import SinglePage from "./pages/SInglePage"
+import SinglePage from "./pages/SinglePage"
 import CreatePage from "./pages/CreatePage"
 import EditPage from "./pages/EditPage"
 
