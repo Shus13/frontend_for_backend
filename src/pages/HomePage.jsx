@@ -8,6 +8,7 @@ import axios from "axios";
 function HomePage() {
     const fetchBooks = async() => {
         const response = await axios.get("http://localhost:4000/api/books")
+        console.log(response.data.datas)
     }
     useEffect(()=>{
         fetchBooks()
