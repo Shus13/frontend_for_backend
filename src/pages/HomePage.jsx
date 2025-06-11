@@ -6,13 +6,15 @@ import axios from "axios";
 
 
 function HomePage() {
+    const [books, setBooks] = useState([])
     const fetchBooks = async() => {
         const response = await axios.get("http://localhost:4000/api/books")
-        console.log(response.data.datas)
+        setBooks(response.data.datas)
     }
     useEffect(()=>{
         fetchBooks()
     },[])
+    console.log(books, "This is books")
     return (
 
         <>
@@ -24,15 +26,13 @@ function HomePage() {
             < Button title="Skip" />
 
             <div className="flex flex-wrap">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {
+                    books.map(function(book){
+                        return (
+                            <Card book={book}/>
+                        )
+                    })
+                }
             </div>
         </>
     )
